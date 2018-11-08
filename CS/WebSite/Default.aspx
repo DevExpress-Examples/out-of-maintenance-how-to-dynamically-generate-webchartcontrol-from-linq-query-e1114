@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
-<%@ Register assembly="DevExpress.XtraCharts.v8.2.Web, Version=8.2.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1" namespace="DevExpress.XtraCharts.Web" tagprefix="dxchartsui" %>
-<%@ Register assembly="DevExpress.XtraCharts.v8.2, Version=8.2.7.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1" namespace="DevExpress.XtraCharts" tagprefix="cc1" %>
+<%@ Register assembly="DevExpress.XtraCharts.v13.1.Web, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.XtraCharts.Web" tagprefix="dxchartsui" %>
+<%@ Register assembly="DevExpress.XtraCharts.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.XtraCharts" tagprefix="cc1" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -15,22 +15,34 @@
     
         <dxchartsui:WebChartControl ID="WebChartControl1" runat="server" Height="300px" 
             Width="600px">
-<SeriesTemplate LabelTypeName="SideBySideBarSeriesLabel" PointOptionsTypeName="PointOptions" SeriesViewTypeName="SideBySideBarSeriesView">
-<View HiddenSerializableString="to be serialized"></View>
+<SeriesTemplate   >
+<ViewSerializable>
+<cc1:SideBySideBarSeriesView HiddenSerializableString="to be serialized"></cc1:SideBySideBarSeriesView>
+</ViewSerializable>
 
-<Label HiddenSerializableString="to be serialized">
-<FillStyle FillOptionsTypeName="SolidFillOptions">
-<Options HiddenSerializableString="to be serialized"></Options>
+<LabelSerializable>
+<cc1:SideBySideBarSeriesLabel HiddenSerializableString="to be serialized">
+<FillStyle >
+<OptionsSerializable>
+<cc1:SolidFillOptions HiddenSerializableString="to be serialized"></cc1:SolidFillOptions>
+</OptionsSerializable>
 </FillStyle>
-</Label>
+</cc1:SideBySideBarSeriesLabel>
+</LabelSerializable>
 
-<PointOptions HiddenSerializableString="to be serialized"></PointOptions>
+<PointOptionsSerializable>
+<cc1:PointOptions HiddenSerializableString="to be serialized"></cc1:PointOptions>
+</PointOptionsSerializable>
 
-<LegendPointOptions HiddenSerializableString="to be serialized"></LegendPointOptions>
+<LegendPointOptionsSerializable>
+<cc1:PointOptions HiddenSerializableString="to be serialized"></cc1:PointOptions>
+</LegendPointOptionsSerializable>
 </SeriesTemplate>
 
-<FillStyle FillOptionsTypeName="SolidFillOptions">
-<Options HiddenSerializableString="to be serialized"></Options>
+<FillStyle >
+<OptionsSerializable>
+<cc1:SolidFillOptions HiddenSerializableString="to be serialized"></cc1:SolidFillOptions>
+</OptionsSerializable>
 </FillStyle>
         </dxchartsui:WebChartControl>
     
